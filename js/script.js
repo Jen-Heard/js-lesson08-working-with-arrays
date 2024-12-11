@@ -1,28 +1,26 @@
-var hobbies = ["reading", "writing", "cooking", "coding", "painting", "running"];
-var goals = ["Complete Skillcrush bootcamp", "Find a front end developer job", "Relocate to Spain"];
-
-console.log(hobbies.length);
-
-hobbies.push("listening to music");
-console.log(hobbies[2]);
-
+var hobbies = ["reading", "swimming", "wine tasting", "jogging", "playing with my pups", "cooking"];
+// console.log(hobbies.length);
+hobbies.push("painting");
+// console.log(hobbies[2]);
 hobbies.pop();
-console.log(hobbies.length);
-
-hobbies.splice(2, 0, "swimming", "playing with dogs");
-console.log(hobbies);
-
+hobbies.splice(2, 0, "biking", "traveling");
+// console.log(hobbies);
 hobbies.shift();
-hobbies.unshift("playing basketball");
-console.log(hobbies);
+// console.log(hobbies);
+hobbies.unshift("playing games");
+// console.log(hobbies);
+
+var goals = ["complete coding bootcamp", "sell my house", "move to Spain"];
 
 var allTheThings = [...hobbies, ...goals];
 console.log(allTheThings);
+console.log(allTheThings.indexOf("wine tasting"));
 
-var thing = allTheThings.indexOf("painting");
-console.log(thing);
+allTheThings.splice(4, 1);
+console.log(allTheThings);
 
 var plans = allTheThings.map(function (item) {
-    return `I can't wait to start ${item}.`
+    return `I can't wait to start ${item}`;
 });
+
 console.log(plans);
